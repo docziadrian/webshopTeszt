@@ -47,3 +47,14 @@ input[type=range]::-webkit-slider-thumb {
     padding: 5px;
     border-bottom: 1px dashed rgba(87, 87, 87, 0.671);
   }
+
+
+  #description {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2; /* Limits text to 2 lines */
+    overflow: hidden; /* Hides the overflowing text */
+    text-overflow: ellipsis; /* Adds "..." if text is truncated */
+    max-height: 3em; /* Approximate height for 2 lines */
+    line-height: 1.5em; /* Adjust as needed based on your font size */
+}

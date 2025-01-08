@@ -1,4 +1,4 @@
-const Navbar = () => {
+export default function Navbar() {
     return(
         `
             <div class="flex justify-between h-20">
@@ -7,7 +7,11 @@ const Navbar = () => {
                     <p class="text-sm text-gray-700">Szép webdesign-al</p>
                 </div>
                 <div class="flex self-center text-start leading-5 tracking-tight text-pretty antialiased gap-5  text-lg font-semibold pr-20">
-                    <a href="">Home</a>
+                    <a href="../index.html">Home</a>
+                    <div onClick="popUp()" class="flex -space-x-4 cursor-pointer">
+                      <img class="w-10 h-10" src="../Pictures/navCart.png" />
+                      <h1 id="cartAmount" class="text-sm bg-black/50 rounded-xl h-5 w-5 text-white text-center">0</h1>
+                    </div>
                     <details class="dropdown menu-drop">
                         <summary role="button">
                           <h4 class="text">Shop ˇ</h4>
@@ -44,4 +48,3 @@ const Navbar = () => {
     )
 }
 
-document.querySelector("#navbar").innerHTML += Navbar()
